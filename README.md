@@ -16,3 +16,4 @@ with payload of `{message:"read this",name:"arnold",sample_rate:1.0}`. `message`
 1. To read back converted speech, use the `GET` endpoint `/api/voice/`
 with audio filename set a query params `name`  e.g. `.../api/voice?name=sample01.wav`
 1. All generated audio are saved in `audio/outputs` folder with the file name `<sample>_<timestamp>`.
+1. Check `http://localhost:7861/docs` for OpenAPI documentation
