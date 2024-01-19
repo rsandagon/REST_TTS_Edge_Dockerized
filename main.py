@@ -60,10 +60,6 @@ async def post_tts(item: Item):
 
     samples = tts.synthesize(remove_between_asterisks(item.message), speakers[-1])
 
-    CHANNELS = 1
-    swidth = 2
-    Change_RATE = 2
-
     with wave.open("audio/outputs/"+outname, "w") as fp:
         fp.setparams((1, 2, tts.get_sampling_rate()*sample_rate, len(samples), "NONE", "NONE"))
         fp.writeframes(samples)
